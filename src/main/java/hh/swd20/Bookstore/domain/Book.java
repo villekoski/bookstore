@@ -7,6 +7,8 @@ public class Book {
 	int year;
 	String isbn;
 	double price;
+	
+	
 	public String getTitle() {
 		return title;
 	}
