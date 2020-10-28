@@ -28,22 +28,22 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 @Override
 
 protected void configure(HttpSecurity http) throws Exception {
-http
-.authorizeRequests().anyRequest().authenticated().and()
-.formLogin()
-.loginPage("/login")
-.permitAll().and()
-.logout()
-.permitAll()
-.invalidateHttpSession(true);
-}
-
+	http
+	.authorizeRequests().anyRequest().authenticated().and()
+	.formLogin()
+	.loginPage("/login")
+	.permitAll().and()
+	.logout()
+	.permitAll()
+	.invalidateHttpSession(true);
+}	
+	
 @Autowired
 private UserDetailServiceImpl userDetailsService;
 
 @Autowired
 public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-auth.userDetailsService(userDetailsService).passwordEncoder(new
-BCryptPasswordEncoder());
-}
-}
+	auth.userDetailsService(userDetailsService).passwordEncoder(new
+	BCryptPasswordEncoder());
+		}
+	}

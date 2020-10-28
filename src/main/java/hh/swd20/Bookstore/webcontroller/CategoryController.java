@@ -25,7 +25,7 @@ public class CategoryController {
 	  @RequestMapping(value ="/addC")
 	    public String addCategory(Model model) {
 		  model.addAttribute("category", new Category());
-	        return "newcategory";
+		  return "newcategory";
 	}
 	  @RequestMapping(value = "/saveC", method = RequestMethod.POST)
 	  	public String save(Category category) {

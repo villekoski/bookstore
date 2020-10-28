@@ -28,16 +28,16 @@ public class BookstoreApplication {
         return (args) -> {	
         	
         	
-        	 Category c1 = new Category("Comedy");
-             Category c2 = new Category("Documentary");
-             Category c3 = new Category("Drama");
-             cRepository.save(c1);
-             cRepository.save(c2);
-             cRepository.save(c3);
+        	Category cc = new Category("Comedy");
+            Category cd = new Category("Documentary");
+            Category ca = new Category("Drama");
+            cRepository.save(cc);
+            cRepository.save(cd);
+            cRepository.save(ca);
              
-            Book b1 = new Book("Työmiehen päiväkirja", "Kari Tapio", 1990, "1324569781", 50.0, c1 );
-            Book b2 = new Book("Aamupäivä", "Timo Jutila", 2010, "6894037481", 60.0, c2);
-            Book b3 = new Book("Pelimies", "Pirkko Pitäjä", 1890, "5891287498", 200.0, c3);
+            Book b1 = new Book("Työmiehen päiväkirja", "Kari Tapio", 1990, "1324569781", 50.0, ca );
+            Book b2 = new Book("Aamupäivä", "Timo Jutila", 2010, "6894037481", 60.0, cc);
+            Book b3 = new Book("Pelimies", "Pirkko Pitäjä", 1890, "5891287498", 200.0, cd);
             
             repository.save(b1);
             repository.save(b2);

@@ -14,11 +14,11 @@ public class Book {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
-    String title;
-    String author;
-    Integer year;
-    String isbn;
-    Double price;
+    private String title;
+    private String author;
+    private Integer year;
+    private String isbn;
+    private Double price;
     @JsonIgnoreProperties ("books") 
     @ManyToOne
     @JoinColumn(name = "Cid")

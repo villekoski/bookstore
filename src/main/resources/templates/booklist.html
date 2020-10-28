@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Booklist</title>
@@ -17,7 +18,6 @@
                 <td th:text="${book.isbn}"></td>
                 <td th:text="${book.price}"></td>
                	<td th:text="${book.category.name}"></td>
-               	
                 <td sec:authorize="hasRole('ADMIN')"><a th:href="@{/delete/{id}(id=${book.id})}">Delete</a></td>
                 <td><a th:href="@{/edit/{id}(id=${book.id})}">Edit</a></td>
             
@@ -27,8 +27,7 @@
        </tbody>
 
     </table>
-          <form th:action="@{/logout}" method=
-"post">
+          <form th:action="@{/logout}" method="post">
 <input type="submit" value="Sign Out"/>
 </form>
 </body>
