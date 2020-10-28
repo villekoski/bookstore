@@ -3,6 +3,8 @@ package hh.swd20.Bookstore;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 
 import org.slf4j.Logger;
@@ -14,14 +16,25 @@ import hh.swd20.Bookstore.domain.CategoryRepository;
 import hh.swd20.Bookstore.domain.User;
 import hh.swd20.Bookstore.domain.UserRepository;
 
-@SpringBootApplication
-public class BookstoreApplication {
 
+
+	@SpringBootApplication
+	public class BookstoreApplication extends SpringBootServletInitializer {
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder
+	application) {
+	return application.sources(BookstoreApplication.class);
+	}
+
+	
 	private static final Logger Log = LoggerFactory.getLogger(BookstoreApplication.class);
 
 	
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         SpringApplication.run(BookstoreApplication.class, args);
+        
+        
+        
     }
     @Bean
     public CommandLineRunner demo(BookRepository repository, CategoryRepository cRepository, UserRepository uRepository) {
