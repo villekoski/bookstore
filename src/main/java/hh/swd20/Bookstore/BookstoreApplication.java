@@ -7,6 +7,8 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 
+
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import hh.swd20.Bookstore.domain.Book;
@@ -19,12 +21,14 @@ import hh.swd20.Bookstore.domain.UserRepository;
 
 
 	@SpringBootApplication
-	public class BookstoreApplication {
-	
+	public class BookstoreApplication extends SpringBootServletInitializer{	
+		private static final Logger Log = LoggerFactory.getLogger(BookstoreApplication.class);
 
-	
-	private static final Logger Log = LoggerFactory.getLogger(BookstoreApplication.class);
-
+		@Override
+		protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+			return application.sources(BookstoreApplication.class);
+		}
+		
 	
     public static void main(String[] args) throws Exception {
         SpringApplication.run(BookstoreApplication.class, args);
