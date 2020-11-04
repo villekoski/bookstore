@@ -19,12 +19,8 @@ import hh.swd20.Bookstore.domain.UserRepository;
 
 
 	@SpringBootApplication
-	public class BookstoreApplication extends SpringBootServletInitializer {
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder
-	application) {
-	return application.sources(BookstoreApplication.class);
-	}
+	public class BookstoreApplication {
+	
 
 	
 	private static final Logger Log = LoggerFactory.getLogger(BookstoreApplication.class);
