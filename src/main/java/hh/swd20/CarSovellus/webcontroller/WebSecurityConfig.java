@@ -1,5 +1,5 @@
 
-package hh.swd20.CarSovellus.webcontroller;
+/*package hh.swd20.CarSovellus.webcontroller;
 
 
 import java.util.ArrayList;
@@ -48,3 +48,4 @@ public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception 
 	BCryptPasswordEncoder());
 		}
 	}
+*/
