@@ -1,4 +1,4 @@
-package hh.swd20.Bookstore.webcontroller;
+package hh.swd20.CarSovellus.webcontroller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
@@ -7,8 +7,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import hh.swd20.Bookstore.domain.User;
-import hh.swd20.Bookstore.domain.UserRepository;
+import hh.swd20.CarSovellus.domain.User;
+import hh.swd20.CarSovellus.domain.UserRepository;
 
 
 @Service

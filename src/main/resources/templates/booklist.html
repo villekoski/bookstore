@@ -8,27 +8,34 @@
 <body>
 <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
 
-    <h1>Booklist!</h1>
+    <h1>Car List </h1>
     <table>
         <tbody>
-            <tr th:each = "book : ${books}">
-                <td th:text="${book.title}"></td>
-                <td th:text="${book.author}"></td>
-                <td th:text="${book.year}"></td>
-                <td th:text="${book.isbn}"></td>
-                <td th:text="${book.price}"></td>
-               	<td th:text="${book.category.name}"></td>
-                <td sec:authorize="hasRole('ADMIN')"><a th:href="@{/delete/{id}(id=${book.id})}">Delete</a></td>
-                <td><a th:href="@{/edit/{id}(id=${book.id})}">Edit</a></td>
-            
+            <tr th:each = "car : ${cars}">
+                <td th:text="${car.cartitle}"></td>
+                <td th:text="${car.carcountry}"></td>
+                <td th:text="${car.caryear}"></td>
+                <td th:text="${car.carinfo}"></td>
+                <td th:text="${car.carprice}"></td>
+               	<td th:text="${car.owner.ownername}"></td>
+               <td sec:authorize="hasRole('ADMIN')"><a th:href="@{/delete/{id}(id=${car.carid})}">Delete</a></td>
+               <td><a th:href="@{/edit/{id}(id=${car.carid})}">Edit</a></td>  
+             
                 </tr>
-                <td><a href="/add" class="btn btn-primary">Add Book</a></td>
-                
+            
        </tbody>
 
     </table>
-          <form th:action="@{/logout}" method="post">
+     <form th:action="@{/add}" method="post">	
+                	<input type="submit" value="Add Car To an existing owner"/>
+                	 </form>
+              <form th:action="@{/addC}" method="post">
+<input type="submit" value="Add Car Owner"/>
+
+    </form>
+         <form th:action="@{/logout}" method="post">
 <input type="submit" value="Sign Out"/>
 </form>
+
 </body>
 </html>	

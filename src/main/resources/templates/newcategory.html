@@ -8,9 +8,9 @@
 <body>
     <h1>Add Category</h1>
     <div>
-    <form th:object="${category}" th:action="@{saveC}" action="#" method="post">
-        <label for="name">Name: </label>
-        <input type="text" id="name" th:field="*{name}" /></br>
+    <form th:object="${owner}" th:action="@{saveC}" action="#" method="post">
+        <label for="ownername">Owner Name: </label>
+        <input type="text" id="ownername" th:field="*{ownername}" /></br>
 
         <input type="submit" value="Save"></input>
     </form>

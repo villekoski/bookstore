@@ -1,4 +1,4 @@
-package hh.swd20.Bookstore.domain;
+package hh.swd20.CarSovellus.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
